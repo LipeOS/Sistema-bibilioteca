@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirar Livros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <a href="{{ url_for('index') }}" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+        <h1>Retirar Livros</h1>
+        <!-- Barra de pesquisa -->
+        <div class="book-container">
+            <input type="text" id="search-query" placeholder="Pesquisar livros...">
+            <button id="search-btn" class="btn">Pesquisar</button>
+            <div id="search-results"></div>
+        </div>
+        <!-- Lista de livros -->
+        <div class="books-list">
+            {% for livro in livros %}
+            <div class="book">
+                <h3>{{ livro[1] }}</h3>
+                <p>Autor: {{ livro[2] }}</p>
+                <p>Gênero: {{ livro[3] }}</p>
+                <p>Editora: {{ livro[4] }}</p>
+                <p>Ano: {{ livro[5] }}</p>
+                <p>Quantidade: {{ livro[6] }}</p>
+                <form action="/escolher_livro/{{ livro[0] }}" method="GET">
+                    <button type="submit" class="btn">Retirar Livro</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

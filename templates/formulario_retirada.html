@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirar Livro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Retirar Livro: {{ livro[1] }}</h1>
+        <a href="{{ url_for('retirar_livros') }}" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+        <form action="/escolher_livro/{{ livro[0] }}" method="POST">
+            <div class="input-box">
+                <label for="nome_completo">Nome Completo</label>
+                <input type="text" id="nome_completo" name="nome_completo" required>
+            </div>
+            <div class="input-box">
+                <label for="RA">RA</label>
+                <input type="text" id="RA" name="RA" required>
+            </div>
+            <div class="input-box">
+                <label for="sala">Sala</label>
+                <input type="text" id="sala" name="sala" required>
+            </div>
+            <div class="input-box">
+                <label for="data_retirada">Data de Retirada</label>
+                <input type="date" id="data_retirada" name="data_retirada" required>
+            </div>
+            <div class="input-box">
+                <label for="data_devolucao">Data de Devolução</label>
+                <input type="date" id="data_devolucao" name="data_devolucao" required>
+                <small>Data máxima de devolução: 7 dias</small>
+            </div>
+            <button type="submit" class="btn">Confirmar Retirada</button>
+        </form>
+    </div>
+</body>
+</html>

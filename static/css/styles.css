@@ -1,0 +1,275 @@
+:root {
+    /* Definição de cores principais */
+    --color-background-light: #eeeef0;
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --color-text-muted: #555;
+    --color-primary: #007BFF;
+    --color-primary-hover: #0056b3;
+    --color-danger: #dc3545;
+    --color-danger-hover: #c82333;
+    --color-muted: #999;
+    --color-input-border: #ccc;
+    --color-background-form: #f6f2f2;
+    --color-book-bg: #f9f9f9;
+    --color-table-header-bg: #f4f4f4;
+    --color-table-header-text: #333;
+    --color-table-row-even-bg: #f2f2f2;
+    --color-box-shadow: rgba(0, 0, 0, 0.1);
+
+    /* Outros estilos */
+    --border-radius: 5px;
+    --transition-time: 0.3s;
+}
+
+/* Reset básico para remoção de margens e paddings padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do corpo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--color-background-light);
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+
+/* Container principal */
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(246, 242, 242, 0.864); /* Mantido sem variável por ser opaco */
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px var(--color-box-shadow);
+    padding: 20px 30px;
+    opacity: 0.95;
+    position: relative;
+}
+
+/* Título principal */
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-text-dark);
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Rótulos */
+label {
+    margin-bottom: 10px;
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+/* Caixas de entrada */
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid var(--color-input-border);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botões */
+button {
+    cursor: pointer;
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-time) ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+button.btn-danger {
+    background-color: var(--color-danger);
+}
+
+button.btn-danger:hover {
+    background-color: var(--color-danger-hover);
+}
+
+/* Estilo para links de recuperação de senha */
+.remenber-forgot {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.remenber-forgot a {
+    color: var(--color-primary);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.remenber-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Caixas de entrada personalizadas */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid var(--color-input-border);
+    border-radius: var(--border-radius);
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+/* Ícones das caixas de entrada */
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--color-muted);
+}
+
+/* Estilo dos resultados da pesquisa */
+.book {
+    border: 1px solid var(--color-input-border);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    background-color: var(--color-book-bg);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.book h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.book p {
+    margin: 5px 0;
+}
+
+/* Container de lista de livros */
+.books-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Botão Ver Todos os Livros */
+#view-books-btn {
+    cursor: pointer;
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-text-light);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-time) ease;
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+}
+
+#view-books-btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* Alteração para exibir formulários lado a lado */
+.books-list form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.books-list .book {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Estilo do botão de voltar */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-text-light);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px var(--color-box-shadow);
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* Estilo específico para a tabela de livros retirados */
+#books-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#books-table th, #books-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-input-border);
+}
+
+#books-table tbody tr:nth-child(even) {
+    background-color: var(--color-table-row-even-bg);
+}
+
+#books-table th {
+    background-color: var(--color-table-header-bg);
+    color: var(--color-table-header-text);
+    text-transform: uppercase;
+    font-weight: bold;
+}
