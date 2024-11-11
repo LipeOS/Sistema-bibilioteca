@@ -37,10 +37,11 @@
                     <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade de livros" required>
                 </div>
                 
-                <button type="submit" class="btn">Adicionar Livro</button>
-                <button><a href="{{ url_for('all_books') }}" class="btn">Ver Todos os Livros</a></button>
-                <button><a href="{{ url_for('retirar_livros') }}" class="btn">Retirar Livros</a></button>
-                <button><a href="{{ url_for('livros_retidos') }}" class="btn">Livros Retirados</a></button>
+                <button type="submit"  class="btn">Adicionar Livro</button>
+<a href="{{ url_for('all_books') }}" class="btn action-btn">Ver Todos os Livros</a>
+<a href="{{ url_for('retirar_livros') }}" class="btn action-btn">Retirar Livros</a>
+<a href="{{ url_for('livros_retidos') }}" class="btn action-btn">Livros Retirados</a>
+
             </form>
         </div>
     </div>

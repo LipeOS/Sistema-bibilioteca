@@ -273,3 +273,24 @@ button.btn-danger:hover {
     text-transform: uppercase;
     font-weight: bold;
 }
+
+
+/* Estilo para links que se comportam como botões, evitando conflitos com outros elementos */
+a.btn.action-btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color var(--transition-time) ease;
+    width: 100%; /* Garante que o botão ocupe toda a largura */
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+a.btn.action-btn:hover {
+    background-color: var(--color-primary-hover);
+}
