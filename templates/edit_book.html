@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Livro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <div class="wrapper">
-        <a href="{{ url_for('all_books') }}" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+        <a href="{{ url_for('all_books') }}" class="back-btn"><i class="fas fa-arrow-left"></i> </a>
         <h1>Editar Livro</h1>
         <form method="POST" action="{{ url_for('edit_book', id=livro[0]) }}">
             <label for="titulo">Título:</label>
