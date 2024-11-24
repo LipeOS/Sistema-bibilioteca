@@ -1,8 +1,8 @@
 ## Como rodar o sistema?
 Aperte as teclas Crtl + J
 
+Use o comando "pip install -r requirements.txt" para instalar as dependecias
 
-Crie um abiente virtual para o sistema, use esse comando no terminal e de enter logo após: 
 
 python -m venv env
 env\Scripts\activate
